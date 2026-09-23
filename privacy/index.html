@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Dexter</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+<header class="masthead">
+  <nav class="docnav"><a href="../">Dexter</a><a href="../terms/">Terms of Use</a></nav>
+  <p class="eyebrow">Dexter for Pokémon GO</p>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated 23 September 2026 · Effective 23 September 2026</p>
+</header>
+
+<div class="card">
+
+<div class="summary">
+  <p><strong>The short version.</strong> Dexter has no user accounts and no server of its own. Your trainer profile and your saved Pokémon are stored on your iPhone and are never uploaded. Screen scanning happens entirely on your device. The only personal data that leaves your phone is what Apple and our payment provider need in order to sell and restore a subscription.</p>
+  <p>This summary is for orientation only — the sections below are what actually applies.</p>
+</div>
+
+<h2>1. Who is responsible for your data</h2>
+<p>Dexter ("Dexter", "the app") is published by Nick van den Hoven, an individual developer based in the Netherlands, acting as the data controller for the purposes of the General Data Protection Regulation (GDPR).</p>
+<p>You can reach us at <a href="mailto:info.trimtone@gmail.com">info.trimtone@gmail.com</a> with any question about this policy or about your data.</p>
+
+<h2>2. Dexter has no account and no server</h2>
+<p>There is nothing to sign into. Dexter does not ask for your name, your email address, your date of birth, your location, or your Pokémon GO credentials, and it has no way to link what you do in the app to you as a person.</p>
+<p>We do not operate a backend. There is no database of users, because there are no users to put in one.</p>
+
+<h2>3. What Dexter stores on your device</h2>
+<p>The following is written to Dexter's own storage on your iPhone. It stays there, it is included in your device backup if you have one enabled, and it is deleted when you delete the app.</p>
+<ul>
+  <li><strong>Your saved Pokémon</strong> — species, form, CP, level, IVs, the markers you set (Lucky, Shadow, Shiny, favourite and similar), and when each one was saved.</li>
+  <li><strong>Your trainer profile</strong> — the optional trainer name, level, team and trainer code you choose to type in. Every field is optional and Dexter works fully with all of them empty.</li>
+  <li><strong>Your preferences</strong> — appearance (light, dark or system) and whether scan alerts are shown.</li>
+  <li><strong>Recently viewed Pokémon</strong>, so the Pokédex can show you where you have been.</li>
+  <li><strong>Scan thumbnails</strong> — small images kept only so a finished scan can show you what it found.</li>
+  <li><strong>A cached copy of the public data files</strong> described in section 4, so the app works offline.</li>
+</ul>
+<p>None of this is transmitted anywhere. You can export everything Dexter has stored, or destroy it, from the profile page inside the app.</p>
+
+<h2>4. What leaves your device</h2>
+<p>There are exactly two kinds of outbound request.</p>
+
+<h3>a. Public data files</h3>
+<p>Some things in Pokémon GO change faster than app updates ship — the weekly raid roster, the Max Battle rotation, Team GO Rocket line-ups, and the PvP rankings as the meta moves. Dexter downloads these as ordinary, publicly available files from the projects that publish them:</p>
+<table>
+  <tr><th>What</th><th>Published by</th></tr>
+  <tr><td>Raid roster, Team GO Rocket line-ups</td><td>ScrapedDuck / Leek Duck</td></tr>
+  <tr><td>PvP rankings for each league</td><td>PvPoke</td></tr>
+  <tr><td>Max Battle rotation</td><td>Snacknap</td></tr>
+</table>
+<p>These are plain GET requests. Dexter sends no account, no device identifier, no advertising identifier and no query parameters with them, and nothing about you, your collection or your profile is included. As with any request to any website, the host and its content delivery network necessarily see the IP address the request came from and the fact that a request was made; that is a property of the internet rather than something Dexter transmits. Those providers are independent of us and handle such log data under their own policies.</p>
+<p>If these requests fail or you are offline, Dexter falls back to the copy bundled in the app and keeps working.</p>
+
+<h3>b. Purchases</h3>
+<p>Dexter is a paid subscription. Payment itself is handled entirely by Apple through your Apple Account; Dexter never sees or receives your payment card, your billing address or your Apple Account credentials.</p>
+<p>To determine whether a subscription is active, to restore purchases on a new device and to make the free trial work correctly, Dexter uses <strong>RevenueCat</strong>, a subscription management provider acting as our processor. Through the RevenueCat SDK, the following may be processed:</p>
+<ul>
+  <li>a randomly generated, anonymous app user identifier that is not linked to your name or email;</li>
+  <li>the App Store receipt and your subscription status, product, trial eligibility and renewal dates;</li>
+  <li>basic technical information such as device model, operating system version, app version, language and country;</li>
+  <li>the fact that the subscription screen was shown, so we can tell whether the app's pricing screen works at all.</li>
+</ul>
+<p>We use this only to operate the subscription and to understand whether the paywall functions. We do not use it to build a profile of you, and it is never combined with anything from your collection, your profile or your scans — none of which are ever sent to RevenueCat or to us.</p>
+
+<h3>c. That is the whole list</h3>
+<p>Dexter contains <strong>no advertising SDKs, no attribution SDKs, no social SDKs and no third-party analytics</strong> beyond the subscription processing described above. Dexter does not track you across other apps or websites, does not access the advertising identifier (IDFA), and therefore does not ask for App Tracking Transparency permission. We do not sell or share your personal information, and we have never done so.</p>
+
+<h2>5. Screen scanning</h2>
+<p>Dexter can read a Pokémon's details off your screen while you are in Pokémon GO. This matters for privacy, so it is worth being precise about how it works.</p>
+<ul>
+  <li>A scan can only be started by <strong>you</strong>, through iOS's own system screen-broadcast control. Dexter cannot start one in code, and iOS shows its own recording indicator for the whole time one is running.</li>
+  <li>Frames are analysed <strong>on your device</strong>, by code inside Dexter. No frame, no video and no recording is uploaded, transmitted or stored as a recording.</li>
+  <li>Frames that do not contain a Pokémon's details are discarded immediately without being read.</li>
+  <li>The only thing kept is a small thumbnail of what was recognised, in Dexter's own storage, so the app can show you the result. It goes when you delete the scan or the app.</li>
+  <li>Dexter sees nothing when a broadcast is not running, and a broadcast stops when you stop it.</li>
+</ul>
+
+<h2>6. Photos</h2>
+<p>If you import a screenshot, iOS's own picker lets you hand Dexter the single image you chose. It is read on your device to extract the numbers and is not uploaded. Dexter does not request access to your whole photo library.</p>
+
+<h2>7. Legal bases for processing</h2>
+<p>Where the GDPR applies, we rely on: <strong>performance of a contract</strong> (Art. 6(1)(b)) to sell, restore and manage your subscription; and our <strong>legitimate interests</strong> (Art. 6(1)(f)) in keeping the app working, secure and correctly priced, weighed against the fact that the data involved is minimal and not linked to your identity. Data stored only on your device is not processed by us at all.</p>
+
+<h2>8. How long data is kept</h2>
+<p>Data on your device is kept until you delete it in the app or delete the app. Subscription records held by RevenueCat and Apple are kept for as long as needed to operate and account for the subscription, and to meet statutory retention obligations, under their own policies.</p>
+
+<h2>9. International transfers</h2>
+<p>Apple and RevenueCat are established in the United States and may process the data described in section 4(b) there. Such transfers are covered by the European Commission's Standard Contractual Clauses and equivalent safeguards offered by those providers.</p>
+
+<h2>10. Your rights</h2>
+<p>You have the right to access, rectify, erase, restrict and port your personal data, and to object to processing based on legitimate interests.</p>
+<p>In practice: everything Dexter holds about you is on your own device, and the profile page lets you <strong>export</strong> it or <strong>destroy</strong> it yourself, immediately and without asking anybody. For anything relating to your subscription, write to <a href="mailto:info.trimtone@gmail.com">info.trimtone@gmail.com</a> and we will pass the request on to our processor where needed.</p>
+<p>If you believe we have handled your data improperly you may lodge a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens, <a href="https://autoriteitpersoonsgegevens.nl">autoriteitpersoonsgegevens.nl</a>) or with the supervisory authority in your own country.</p>
+
+<h2>11. Children</h2>
+<p>Dexter is not directed at children under 13 and we do not knowingly collect personal data from them. Because the app has no account and no server, there is in practice nothing for a child to submit to us. If you believe a child has provided us with personal data, contact us and we will delete it.</p>
+
+<h2>12. Changes to this policy</h2>
+<p>If this policy changes, the updated version is published at this address with a new date at the top. Material changes will also be noted in the app's release notes. Continuing to use Dexter after a change means you accept the updated policy.</p>
+
+<h2>13. Contact</h2>
+<p>Nick van den Hoven — <a href="mailto:info.trimtone@gmail.com">info.trimtone@gmail.com</a></p>
+
+<footer>
+  <p>Dexter is an unofficial fan project. It is not affiliated with, endorsed by or sponsored by Niantic, Inc., Nintendo, Creatures Inc., GAME FREAK Inc. or The Pokémon Company. Pokémon and Pokémon GO are trademarks of their respective owners.</p>
+</footer>
+
+</div>
+</main>
+</body>
+</html>
